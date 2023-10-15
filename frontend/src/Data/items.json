@@ -1,0 +1,66 @@
+[
+    {
+      "id": 0,
+      "image": "biryani",
+      "alt": "Biryani",
+      "title": "Biryani",
+      "summary": ""
+    },
+    {
+      "id": 1,
+      "image": "pizza",
+      "alt": "Pizza",
+      "title": "Pizza",
+      "summary": ""
+    },
+    {
+      "id": 2,
+      "image": "fish",
+      "alt": "Fish",
+      "title": "Fish",
+      "summary": ""
+    },
+    {
+      "id": 3,
+      "image": "kebab",
+      "alt": "Kebab",
+      "title": "Kebab",
+      "summary": ""
+    },
+    {
+      "id": 4,
+      "image": "icecream",
+      "alt": "Ice-cream",
+      "title": "Ice-cream",
+      "summary": ""
+    },
+    {
+      "id": 5,
+      "image": "soup",
+      "alt": "Soup",
+      "title": "Soup",
+      "summary": ""
+    },
+    {
+      "id": 6,
+      "image": "burger",
+      "alt": "Burger",
+      "title": "Burger",
+      "summary": ""
+    },
+    {
+      "id": 7,
+      "image": "ramen",
+      "alt": "Ramen",
+      "title": "Ramen",
+      "summary": ""
+    },
+    {
+      "id": 8,
+      "image": "tea",
+      "alt": "Tea",
+      "title": "Tea",
+      "summary": ""
+    }
+  ]
+  
