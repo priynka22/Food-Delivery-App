@@ -1,85 +1,44 @@
-import React, { useState } from 'react';
-import Card from './Card.js';
-import biryani from './biryani.jpeg'
-import burger from './burger.jpeg'
-import fish from './fish.jpeg'
-import pizza from './pizza.jpeg'
-import ramen from './ramen.jpeg'
-import icecream from './icecream.jpeg'
-import soup from './soup.jpeg'
-import kebab from './kebab.jpeg'
-import tea from './tea.jpeg'
+import React, { useState,useEffect } from 'react';
+import Card from './Items.js';
+import axios from "axios";
+import biryani from './Images/biryani.jpeg'
+import burger from './Images/burger.jpeg'
+import fish from './Images/fish.jpeg'
+import pizza from './Images/pizza.jpeg'
+import ramen from './Images/ramen.jpeg'
+import icecream from './Images/icecream.jpeg'
+import soup from './Images/soup.jpeg'
+import kebab from './Images/kebab.jpeg'
+import tea from './Images/tea.jpeg'
+
 
 
 
 export default function Restaurant({onAddItem,onRemoveItem}) {
 
-  const [items, setItems] = useState([
-    {
-      id: 0,
-       image:biryani,
-      alt: 'Biryani',
-      title: 'Biryani',
-      Summary: '',
-    },
-    {
-      id: 1,
-      image:pizza,
-      alt: 'Pizza',
-      title: 'Pizza',
-      Summary: '',
-    },
-    {
-      id: 2,
-      image:fish,
-      alt: 'Fish',
-      title: 'Fish',
-      Summary: '',
-    },
-    {
-      id: 3,
-      image:kebab,
-      alt: 'Kebab',
-      title: 'Kebab',
-      Summary: '',
-    },
-    {
-      id: 4,
-      image:icecream,
-      alt: 'Ice-cream',
-      title: 'Ice-cream',
-      Summary: '',
-    },
-    {
-      id: 5,
-      image:soup,
-      alt: 'Soup',
-      title: 'Soup',
-      Summary: '',
-    },
-    {
-      id: 6,
-      image:burger,
-      alt: 'Burger',
-      title: 'Burger',
-      Summary: '',
-    },
-    {
-      id: 7,
-      image:ramen,
-      alt: 'Ramen',
-      title: 'Ramen',
-      Summary: '',
-    },
-    {
-      id: 8,
-      image:tea,
-      alt: 'Tea',
-      title: 'Tea',
-      Summary: '',
+  const [items, setItems] = useState([]);
+
+  const [product, setProduct] = useState([]);
+
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get('http://localhost:3001/api/products'); 
+        console.log(response.data);
+        setProduct(response.data);
+     
+      } catch (error) {
+        console.log(error);
+        console.log("Something went wrong!!");
+       
+      }
     }
-    
-  ]);
+  
+    fetchData();
+  }, []);
+  
+
 
   const handleAddItem=id=>{
     onAddItem();
@@ -90,18 +49,18 @@ export default function Restaurant({onAddItem,onRemoveItem}) {
     onRemoveItem();
   }
 
-  const rows = [];
+ /* const rows = [];
   for (let i = 0; i < items.length; i += 3) {
     const row = items.slice(i, i + 3);
     rows.push(row);
-  }
+  }*/
 
   return (
 <>
 <div className='container'>
-        {rows.map((row, index) => (
-          <div key={index} className='row'>
-            {row.map((item) => (
+        {data.map(() => (
+          <div className='row'>
+            {data.map((item) => (
               <div key={item.id} className='col'>
                 <Card onAdd={handleAddItem} onRemove={handleRemoveItem} data={item} />
               </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Card({ data ,onAdd, onRemove}) {
-  const [count, setCount] = useState(0);
+ const [count, setCount] = useState(0);
 
   const increaseCount = () => {
     onAdd(data.id);

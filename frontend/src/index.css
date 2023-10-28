@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.img-div{
+  top: 40%;
+  margin-left: 6%;
+}
+
+.imgIcon{
+  width: 70px;
+  height: 70px;
+}
+.fontColor{
+   color: rgb(116, 19, 103);
+}
+
+.navList:hover{
+  color: rgb(116, 19, 103);
+}
+
+.imgMeal:hover{
+  transform: scale(1.1); 
+  transition: 1s;
+}
+.lowerSection{
+  background-image:url("./Component/Images/parallaxImage.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+ background-size: cover;
+ margin-top: 8%;
+ margin-bottom: 8%;
+}
+
+
+.loginForm{
+  background-image: url("./Component/Images/loginImage.jpg");
+  background-attachment: fixed;
+ background-size: cover;
+}
+
+.signInForm
+{
+  margin-top: 10%;
+  
+}
+
+.aboutBlog{
+  top:30%;
+}
+
+.offerImage{
+  margin-left: 10%;
+}
+.offerTag{
+  margin-top: 8%;
+}
+
+.cart{
+  margin-left: 20%;
+
+}
