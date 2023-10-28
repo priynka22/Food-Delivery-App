@@ -12,7 +12,7 @@ app.use(cors());
 
 app.use(express.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/food");
+mongoose.connect("mongodb+srv://priyankakumarioraon22:0NxltFCokz9kBjC1@cluster0.a4cbmjj.mongodb.net/?retryWrites=true&w=majority");
 console.log("Connected to MongoDB");
 
 app.use((req, res, next) => {
