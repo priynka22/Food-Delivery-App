@@ -36,7 +36,7 @@ export default function Menu({onAddItem,onRemoveItem}) {
   useEffect(() => {
     async function fetchItems() {
       try {
-        const response = await axios.get(`http://localhost:3001/api/products`);
+        const response = await axios.get(`https://food-delivery-app-kappa-eight.vercel.app//api/products`);
         const data = response.data;
         const transformedData = data.map((item, index) => ({
           ...item,
