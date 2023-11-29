@@ -54,9 +54,10 @@ export default function Menu({onAddItem,onRemoveItem}) {
     fetchItems();
 
   }, []); 
-
- return  loading ? (
-    <p>Loading..........</p>
+  return  loading ? (
+    <div className='loader'> 
+       <h3>Loading.........</h3>
+    </div>
   ) : (
     <>
       <RestaurantContainer />
