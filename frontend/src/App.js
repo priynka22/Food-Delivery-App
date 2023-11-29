@@ -8,7 +8,9 @@ import Homepage from './Component/Homepage';
 import Contact from './Component/Contact';
 import Menu from './Component/Menu';
 import Signin from './Component/Signin';
+import Signup from './Component/Signup';
 import Cart from './Component/Cart';
+import OrderPlaced from './Component/OrderPlaced';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -48,6 +50,8 @@ function App() {
         />
         <Route path="/Cart" element={<Cart count={cartItems.length} items={cartItems} />} />
         <Route path="/Signin" element={<Signin />} />
+        <Route path="/Signup" element={<Signup />} />
+        <Route path="/OrderPlaced" element={<OrderPlaced/>}/>
       </Routes>
       <Footer />
     </Router>

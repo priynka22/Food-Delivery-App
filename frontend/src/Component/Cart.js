@@ -9,12 +9,21 @@ export default function Cart({ count, items }) {
   return (
     <>
       <div className='position-relative'>
-        <img src={cartImage} className="img-fluid" alt="..." />
+        <img src={cartImage} className="img-fluid" alt="backgroundImg" />
       </div>
-      <div className='position-absolute top-50 cart translate-middlecart'>
+      <div className='position-absolute cart translate-middlecart'>
         {count > 0 ? (
           <>
+          <div className='container-fluid'>
             <h5>ITEM(S) ADDED</h5>
+            <table className="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col" className="ms-3">Price</th>
+          </tr>
+        </thead>
+        </table>
             {items.map(item => {
               return <CartItems data={item} key={item.id} />;
             })}
@@ -27,13 +36,14 @@ export default function Cart({ count, items }) {
               }
              </span>
              <br />
-            <button className='btn btn-outline-secondary opacity-75'>Place order</button>
+            <button className='btn btn-outline-secondary opacity-75' onClick={() => navigate("/OrderPlaced")}>Place order</button>
+            </div>
           </>
         ) : (
           <>
-            <div>
-              <h2>Cart is empty</h2>
-              <button type="button" className="btn btn-outline-secondary" onClick={() => navigate("/Menu")}>Shop now</button>
+            <div className='text-center '>
+              <h1>Cart is empty</h1>
+              <button type="button" className="btn btn-outline-secondary mt-3" onClick={() => navigate("/Menu")}>Shop now</button>
             </div>
           </>
         )}
