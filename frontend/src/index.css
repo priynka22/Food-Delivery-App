@@ -44,9 +44,8 @@ code {
 
 
 .loginForm{
-  background-image: url("./Component/Images/loginImage.jpg");
-  background-attachment: fixed;
- background-size: cover;
+  background-color: rgba(233, 222, 235, 0.5);
+ overflow: hidden;
 }
 
 .signInForm
@@ -67,6 +66,24 @@ code {
 }
 
 .cart{
-  margin-left: 20%;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
 
+.order{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: rgba(233, 222, 235, 0.5);
+}
+
+.loader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 }
